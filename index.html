@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlon Jordan | Product Support Lead</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .background-flair {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image:
+                radial-gradient(circle at 15% 85%, rgba(113, 164, 235, 0.1), transparent 30%),
+                radial-gradient(circle at 85% 20%, rgba(113, 164, 235, 0.1), transparent 30%);
+            background-attachment: fixed;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3b82f6; /* blue-500 */
+        }
+        .experience-toggle {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .experience-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out;
+        }
+        .alignment-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .alignment-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* Styles for the new Competency Cards */
+        .competency-card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .competency-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+        }
+        .competency-icon {
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            background-color: #eef2ff; /* indigo-100 */
+            color: #4f46e5; /* indigo-600 */
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <div class="background-flair"></div>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-800">Marlon Jordan</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#alignment" class="nav-link text-slate-600 font-medium">Alignment</a>
+                <a href="#experience" class="nav-link text-slate-600 font-medium">Experience</a>
+                <a href="#competencies" class="nav-link text-slate-600 font-medium">Competencies</a>
+                <a href="#certifications" class="nav-link text-slate-600 font-medium">Certifications</a>
+                <a href="#skills" class="nav-link text-slate-600 font-medium">Skills</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-slate-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#alignment" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-100">Alignment</a>
+            <a href="#experience" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-100">Experience</a>
+            <a href="#competencies" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-100">Competencies</a>
+            <a href="#certifications" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-100">Certifications</a>
+            <a href="#skills" class="block py-2 px-6 text-sm text-slate-600 hover:bg-slate-100">Skills</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Introduction Section -->
+        <section id="home" class="text-center mb-20 md:mb-32">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4">Product Support Lead</h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 mb-8">
+                A technical support professional with a 10-year record of resolving complex escalations and enhancing operational workflows. Skilled in acting as the primary liaison between customer experience, product, and engineering teams to identify bug patterns, improve internal tools, and build comprehensive support documentation.
+            </p>
+            <div class="flex justify-center items-center space-x-4">
+                <a href="https://www.linkedin.com/in/mj2117" target="_blank" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 transition-all">
+                    LinkedIn Profile
+                </a>
+                <a href="#alignment" class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg shadow-md border border-slate-200 hover:bg-slate-50 transition-all">
+                    See My Alignment
+                </a>
+            </div>
+        </section>
+
+        <!-- Alignment Comparison Section -->
+        <section id="alignment" class="mb-20 md:mb-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Role Alignment Comparison</h2>
+                <p class="mt-2 text-lg text-slate-500">How my experience directly meets the needs of the Product Support Lead role.</p>
+            </div>
+            <div class="space-y-6">
+                <!-- Card 1 -->
+                <div class="alignment-card bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-6 md:p-8 text-white shadow-lg">
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 opacity-80">Spark Advisors Needs...</h3>
+                            <p class="font-semibold text-xl">An owner for complex or escalated support tickets across systems, tools, and vendors.</p>
+                        </div>
+                        <div class="border-t md:border-t-0 md:border-l border-white/20 pt-4 md:pt-0 md:pl-8">
+                            <h3 class="font-bold text-lg mb-2 text-indigo-200">My Experience...</h3>
+                            <p class="text-xl">Acted as the technical escalation point for complex operational issues, troubleshooting across multiple platforms to deliver timely resolutions and maintain system integrity.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="alignment-card bg-white rounded-xl p-6 md:p-8 shadow-lg border border-slate-200">
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-slate-500">Spark Advisors Needs...</h3>
+                            <p class="font-semibold text-xl text-slate-800">A primary liaison between CX and Product/Engineering teams for technical escalations.</p>
+                        </div>
+                        <div class="border-t md:border-t-0 md:border-l border-slate-200 pt-4 md:pt-0 md:pl-8">
+                            <h3 class="font-bold text-lg mb-2 text-slate-500">My Experience...</h3>
+                            <p class="text-xl text-slate-700">Developed and implemented communication strategies that streamlined information flow between Product, Engineering, and Operations teams, enhancing clarity on initiatives and requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="alignment-card bg-white rounded-xl p-6 md:p-8 shadow-lg border border-slate-200">
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-slate-500">Spark Advisors Needs...</h3>
+                            <p class="font-semibold text-xl text-slate-800">Someone to identify patterns, analyze trends, and propose improvements.</p>
+                        </div>
+                        <div class="border-t md:border-t-0 md:border-l border-slate-200 pt-4 md:pt-0 md:pl-8">
+                            <h3 class="font-bold text-lg mb-2 text-slate-500">My Experience...</h3>
+                            <p class="text-xl text-slate-700">Reviewed support escalations and incident logs to identify process gaps, implementing workflow improvements that enhanced response times and team efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Card 4 -->
+                <div class="alignment-card bg-white rounded-xl p-6 md:p-8 shadow-lg border border-slate-200">
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2 text-slate-500">Spark Advisors Needs...</h3>
+                            <p class="font-semibold text-xl text-slate-800">A partner for product testing, QA pilots, and post-launch validation.</p>
+                        </div>
+                        <div class="border-t md:border-t-0 md:border-l border-slate-200 pt-4 md:pt-0 md:pl-8">
+                            <h3 class="font-bold text-lg mb-2 text-slate-500">My Experience...</h3>
+                            <p class="text-xl text-slate-700">Partnered with the product team to conduct user acceptance testing and post-launch validation for new tooling, translating user feedback into actionable insights for the engineering team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="mb-20 md:mb-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Professional Experience</h2>
+                <p class="mt-2 text-lg text-slate-500">A decade of progressive experience in technical and product-focused roles.</p>
+            </div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Column 1 -->
+                <div class="space-y-8">
+                    <!-- Experience 1 -->
+                    <div class="bg-white rounded-lg shadow-md border border-slate-200">
+                        <div class="experience-toggle p-6 flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-800">Product Operations Specialist</h3>
+                                <p class="text-slate-500">Bloomberg LP | Aug 2021 - Nov 2024</p>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="experience-content">
+                            <div class="p-6 border-t border-slate-200">
+                                <ul class="space-y-3 text-slate-600 list-disc list-inside">
+                                    <li>Analyzed the product support ticketing workflow to identify and report on issue patterns and product gaps, providing evidence-based proposals that improved resolution pathways.</li>
+                                    <li>Authored and maintained internal support documentation on operational procedures and product features, enabling team members to resolve issues independently and reducing escalations.</li>
+                                    <li>Acted as the technical escalation point for complex operational issues, troubleshooting across multiple platforms to deliver timely resolutions and maintain system integrity.</li>
+                                    <li>Partnered with the product team to conduct user acceptance testing and post-launch validation for new tooling, translating user feedback into actionable insights for the engineering team.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Experience 3 -->
+                    <div class="bg-white rounded-lg shadow-md border border-slate-200">
+                        <div class="experience-toggle p-6 flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-800">Senior IT Support Engineer</h3>
+                                <p class="text-slate-500">Bloomberg LP | May 2013 - May 2017</p>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="experience-content">
+                            <div class="p-6 border-t border-slate-200">
+                                <ul class="space-y-3 text-slate-600 list-disc list-inside">
+                                    <li>Demonstrated advanced problem-solving skills by resolving complex technical issues for a 18,000-person user base, contributing to product stability.</li>
+                                    <li>Reviewed support escalations and incident logs to identify process gaps, implementing workflow improvements that enhanced response times and team efficiency.</li>
+                                    <li>Contributed to the upgrade of self-service IT tools that empowered over 5,000 end-users to resolve issues independently, directly reducing escalations to the support team.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="space-y-8">
+                    <!-- Experience 2 -->
+                    <div class="bg-white rounded-lg shadow-md border border-slate-200">
+                        <div class="experience-toggle p-6 flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-800">Technical Support Lead Executive</h3>
+                                <p class="text-slate-500">Bloomberg LP | May 2017 - Aug 2021</p>
+                            </div>
+                            <svg class="w-6 h-6 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="experience-content">
+                            <div class="p-6 border-t border-slate-200">
+                                <ul class="space-y-3 text-slate-600 list-disc list-inside">
+                                     <li>Provided dedicated technical support for executive stakeholders, translating user pain points into clear product insights and mitigation strategies for the engineering team.</li>
+                                     <li>Enabled 8,000 users through a company-wide technology launch by developing targeted training materials and documentation that improved workflow consistency and reduced support tickets.</li>
+                                     <li>Owned and resolved complex technical issues across integrated A/V conferencing systems for over 150 annual global meetings, ensuring high reliability for all participants.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies Section -->
+        <section id="competencies" class="mb-20 md:mb-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">My Areas of Expertise</h2>
+                <p class="mt-2 text-lg text-slate-500">A practical look at how I solve problems and create value.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Competency 1 -->
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Technical Escalation</h3>
+                    <p class="text-slate-600">I serve as the final point of contact for the most challenging technical issues, performing deep-dive analysis to deliver clear, timely resolutions and prevent future occurrences.</p>
+                </div>
+                <!-- Competency 2 -->
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V4a2 2 0 012-2h8a2 2 0 012 2v4z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Cross-Functional Liaison</h3>
+                    <p class="text-slate-600">I translate complex technical problems and user feedback into actionable insights, ensuring Product and Engineering teams understand the real-world impact of their work.</p>
+                </div>
+                <!-- Competency 3 -->
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Team Enablement</h3>
+                    <p class="text-slate-600">I develop targeted training, peer coaching programs, and clear documentation that empower the entire CX team to handle more complex issues with confidence and consistency.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="mb-20 md:mb-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Certifications & Strategic Value</h2>
+                <p class="mt-2 text-lg text-slate-500">Applying certified knowledge to drive support excellence.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Project Management Professional (PMP)</h3>
+                    <p class="text-slate-600">This certification demonstrates my ability to manage complex projects, like the company-wide technology launch for 8,000 users. For a Support Lead, this means I can structure and lead initiatives to improve support tooling or roll out new training programs effectively.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">ITIL v4 Foundation</h3>
+                    <p class="text-slate-600">ITIL provides a framework for service management. My experience improving incident management and meeting SLAs is a direct application of ITIL principles. This knowledge is key for creating stable, repeatable, and scalable support workflows as a Support Lead.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Certified Scrum Product Owner (CSPO)</h3>
+                    <p class="text-slate-600">Understanding the product development lifecycle from a PO's perspective is critical for a liaison role. This certification helps me translate technical support issues into clear, prioritized product insights that engineering and product teams can act on, ensuring the "Voice of the Customer" is heard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20 md:mb-32">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Technical Skills & Methodologies</h2>
+            </div>
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="font-semibold text-lg text-slate-800 mb-3">Technical Support</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>Escalation Management</li>
+                        <li>Bug Triage & Reporting</li>
+                        <li>Root Cause Analysis</li>
+                        <li>Knowledge Base Creation</li>
+                        <li>User & Team Enablement</li>
+                        <li>QA Testing</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="font-semibold text-lg text-slate-800 mb-3">Cross-Functional Collab</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>Product & Engineering Liaison</li>
+                        <li>Stakeholder Communication</li>
+                        <li>Voice of Customer Feedback</li>
+                        <li>Vendor Relations</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="font-semibold text-lg text-slate-800 mb-3">Tools & Platforms</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>Jira, Slack, Miro</li>
+                        <li>Google Workspace</li>
+                        <li>Microsoft Office</li>
+                        <li class="italic text-slate-500">Familiar with: Intercom, Notion, Salesforce</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="font-semibold text-lg text-slate-800 mb-3">Methodologies</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>Agile</li>
+                        <li>Scrum</li>
+                        <li>ITIL</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-semibold">Marlon Jordan</p>
+            <div class="mt-2 flex justify-center items-center space-x-6 text-slate-300">
+                <a href="mailto:Marlon.Jordan21@gmail.com" class="hover:text-blue-400 transition">Marlon.Jordan21@gmail.com</a>
+                <span>&bull;</span>
+                <a href="tel:646-249-6025" class="hover:text-blue-400 transition">(646) 249-6025</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Accordion for Professional Experience
+        const toggles = document.querySelectorAll('.experience-toggle');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('svg');
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Close other open accordions in the same column
+                    const parentColumn = toggle.closest('.space-y-8');
+                    if (parentColumn) {
+                       parentColumn.querySelectorAll('.experience-content').forEach(el => {
+                           if(el.style.maxHeight) {
+                               el.style.maxHeight = null;
+                               el.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+                           }
+                       });
+                    }
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
